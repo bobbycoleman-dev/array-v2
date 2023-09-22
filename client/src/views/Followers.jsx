@@ -1,36 +1,64 @@
-import { ArrowSmallLeftIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import { getOneUserByUsername } from "../services/user-service";
 
 const Followers = ({ user, followType }) => {
 	const [followers, setFollowers] = useState([]);
 	const [follows, setFollows] = useState([]);
+	const [isLoaded, setIsLoaded] = useState(false);
 
 	useEffect(() => {
 		if (followType == "followers") {
-			user.followers.map((user) => {
-				getOneUserByUsername(user.username)
-					.then((oneFollower) => setFollowers([...followers, oneFollower]))
+			user.followers.map((oneUser) => {
+				getOneUserByUsername(oneUser)
+					.then((oneFollower) => {
+						setFollowers([...followers, oneFollower]);
+					})
 					.catch((err) => console.log(err));
 			});
+			if (isLoaded) {
+				setIsLoaded(false);
+			}
+			setIsLoaded(true);
 		}
 		if (followType == "follows") {
-			user.follows.map((user) => {
-				getOneUserByUsername(user.username)
-					.then((oneFollow) => setFollows([...follows, oneFollow]))
+			user.follows.map((oneUser) => {
+				getOneUserByUsername(oneUser)
+					.then((oneFollow) => {
+						setFollows([...follows, oneFollow]);
+					})
 					.catch((err) => console.log(err));
 			});
+			if (isLoaded) {
+				setIsLoaded(false);
+			}
+			setIsLoaded(true);
 		}
-	}, []);
+	}, [followType]);
 
-	return (
-		<div className="w-full h-full overflow-auto py-4 shadow-2xl space-y-4 sm:border-x sm:border-info  sm:order-2 ">
-			<div className="flex gap-2 items-center cursor-pointer px-4" onClick={() => navigate(-1)}>
-				<ArrowSmallLeftIcon className="h-8 text-white" />
-				<h2 className="text-2xl font-bold text-black dark:text-slate-200">{currentUser.name}</h2>
-			</div>
-		</div>
-	);
+	const renderFollows = () => {
+		switch (followType) {
+			case "followers":
+				return user.followers.map((oneUser, idx) => {
+					return (
+						<div key={idx} className="">
+							<p>@{oneUser}</p>
+							{/* <p>{oneUser.username}</p> */}
+						</div>
+					);
+				});
+			case "follows":
+				return user.follows.map((oneUser, idx) => {
+					return (
+						<div key={idx}>
+							<p>@{oneUser}</p>
+							{/* <p>{oneUser.username}</p> */}
+						</div>
+					);
+				});
+		}
+	};
+
+	return <div className="space-y-4 mt-4 text-3xl">{isLoaded && renderFollows()}</div>;
 };
 
 export default Followers;

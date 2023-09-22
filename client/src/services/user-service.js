@@ -45,7 +45,7 @@ async function updateOneUser(userId, user) {
 
 async function getOneUserByUsername(username) {
 	try {
-		const response = await http.get(`/users/${username}`);
+		const response = await http.get(`/users/follows/${username}`);
 		return response.data;
 	} catch (error) {
 		throw error;

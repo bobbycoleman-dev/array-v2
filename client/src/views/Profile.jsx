@@ -9,17 +9,19 @@ import ProfileInfoForm from "../components/ProfileInfoForm";
 import { AuthContext } from "../context/AuthContext";
 import { getAllUserPosts } from "../services/post-service";
 import { getOneUser, updateOneUser } from "../services/user-service";
+import Followers from "./Followers";
 
 const Profile = ({ user }) => {
 	const navigate = useNavigate();
 	const { dispatch } = useContext(AuthContext);
 	const [loggedInUser, setLoggedInUser] = useState(false);
-	const [follower, setFollower] = useState({});
 	const [isFollowing, setIsFollowing] = useState(false);
-	const [currentUser, setCurrentUser] = useState({});
-	const [posts, setPosts] = useState([]);
-	const [loaded, setLoaded] = useState(false);
 	const [isEditing, setIsEditing] = useState(false);
+	const [loaded, setLoaded] = useState(false);
+	const [currentUser, setCurrentUser] = useState({});
+	const [follower, setFollower] = useState({});
+	const [posts, setPosts] = useState([]);
+	const [focus, setFocus] = useState("posts");
 
 	useEffect(() => {
 		if (typeof user == "string") {
@@ -107,6 +109,23 @@ const Profile = ({ user }) => {
 			.catch((err) => console.log(err));
 	};
 
+	const renderSection = () => {
+		switch (focus) {
+			case "follows":
+				return <Followers user={currentUser} followType={focus} />;
+			case "followers":
+				return <Followers user={currentUser} followType={focus} />;
+			default:
+				return (
+					<div className="space-y-4 mt-4">
+						{posts.map((post, idx) => {
+							return <PostCard key={idx} post={post} updateLikedPost={updateLikedPost} />;
+						})}
+					</div>
+				);
+		}
+	};
+
 	return (
 		<div className="w-full h-full overflow-auto py-4 shadow-2xl space-y-4 sm:border-x sm:border-info  sm:order-2 ">
 			<div className="mb-5 sm:hidden">
@@ -149,21 +168,39 @@ const Profile = ({ user }) => {
 							<ProfileInfo currentUser={currentUser} />
 						)}
 						<div className="flex gap-2 mt-3 text-slate-400">
-							<p className="cursor-pointer hover:underline">
+							<p onClick={() => setFocus("follows")} className="cursor-pointer hover:underline">
 								<span className="text-primary">{currentUser.follows.length}</span> Following
 							</p>
-							<p className="cursor-pointer hover:underline">
+							<p onClick={() => setFocus("followers")} className="cursor-pointer hover:underline">
 								<span className="text-primary">{currentUser.followers.length}</span> Followers
 							</p>
 						</div>
-						<div className="mt-10">
-							<p className="text-center text-xl font-extrabold">Posts</p>
-							<hr className="border-black border dark:border-slate-200" />
-							<div className="space-y-4 mt-4">
-								{posts.map((post, idx) => {
-									return <PostCard key={idx} post={post} updateLikedPost={updateLikedPost} />;
-								})}
+						<div className="mt-6">
+							<div className="flex justify-between mx-8">
+								<button
+									onClick={() => setFocus("posts")}
+									className={`text-center text-xl font-extrabold hover:text-primary ${
+										focus == "posts" ? "text-primary" : "text-slate-200"
+									}`}>
+									Posts
+								</button>
+								<button
+									onClick={() => setFocus("follows")}
+									className={`text-center text-xl font-extrabold hover:text-primary ${
+										focus == "follows" ? "text-primary" : "text-slate-200"
+									}`}>
+									Following
+								</button>
+								<button
+									onClick={() => setFocus("followers")}
+									className={`text-center text-xl font-extrabold hover:text-primary ${
+										focus == "followers" ? "text-primary" : "text-slate-200"
+									}`}>
+									Followers
+								</button>
 							</div>
+							<hr className="border-black border dark:border-slate-200" />
+							{renderSection()}
 						</div>
 					</div>
 				</div>
