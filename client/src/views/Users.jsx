@@ -67,7 +67,7 @@ const Users = () => {
 				{postCounts &&
 					postKeys.map((post, idx) => {
 						return (
-							<section key={idx} className="text-black dark:text-slate-200">
+							<section key={idx} className="text-black dark:text-slate-200 cursor-default">
 								<p>{post}</p>
 								<progress
 									className="progress progress-accent dark:progress-primary w-full"

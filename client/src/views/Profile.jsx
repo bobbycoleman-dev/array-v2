@@ -179,21 +179,21 @@ const Profile = ({ user }) => {
 							<div className="flex justify-between mx-8">
 								<button
 									onClick={() => setFocus("posts")}
-									className={`text-center text-xl font-extrabold text-black dark:text-slate-200 hover:text-primary ${
+									className={`text-center text-xl font-extrabold  hover:text-primary ${
 										focus == "posts" ? "text-primary" : "text-black dark:text-slate-200"
 									}`}>
 									Posts
 								</button>
 								<button
 									onClick={() => setFocus("follows")}
-									className={`text-center text-xl font-extrabold text-black dark:text-slate-200 hover:text-primary ${
+									className={`text-center text-xl font-extrabold  hover:text-primary ${
 										focus == "follows" ? "text-primary" : "text-black dark:text-slate-200"
 									}`}>
 									Following
 								</button>
 								<button
 									onClick={() => setFocus("followers")}
-									className={`text-center text-xl font-extrabold text-black dark:text-slate-200 hover:text-primary ${
+									className={`text-center text-xl font-extrabold  hover:text-primary ${
 										focus == "followers" ? "text-primary" : "text-black dark:text-slate-200"
 									}`}>
 									Followers

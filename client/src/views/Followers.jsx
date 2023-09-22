@@ -40,7 +40,9 @@ const Followers = ({ user, followType }) => {
 			case "followers":
 				return user.followers.map((oneUser, idx) => {
 					return (
-						<div key={idx} className="">
+						<div
+							key={idx}
+							className="w-full hover:bg-primary hover:bg-opacity-10 p-2 cursor-pointer rounded-xl">
 							<p>@{oneUser}</p>
 							{/* <p>{oneUser.username}</p> */}
 						</div>
@@ -49,7 +51,9 @@ const Followers = ({ user, followType }) => {
 			case "follows":
 				return user.follows.map((oneUser, idx) => {
 					return (
-						<div key={idx}>
+						<div
+							key={idx}
+							className="w-full hover:bg-primary hover:bg-opacity-10 p-2 cursor-pointer rounded-xl">
 							<p>@{oneUser}</p>
 							{/* <p>{oneUser.username}</p> */}
 						</div>
