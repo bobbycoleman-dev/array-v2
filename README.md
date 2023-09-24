@@ -106,28 +106,28 @@ The layout of [Array] intentionally leaves the left and right sections static wh
 
 ## Running Locally
 
-1. You will need a MongoDB account, I used Atlas
-2. You will need a Firebase account to set up Authentication
+1. You will need a MongoDB account, I used [Atlas](https://www.mongodb.com/cloud/atlas/register)
+2. You will need a [Firebase](https://firebase.google.com/) account to set up Authentication
 3. Clone the repository, run `npm i` to install dependencies
 4. Create a `.env` file for both the server and the client
 5. Server side `.env` file will need:
 
-```env
-PORT=8000
-MONGODB_URI=mongodb+srv://{username}:{password}{db_conection_string}?retryWrites=true&w=majority
-```
+    ```env
+    PORT=8000
+    MONGODB_URI=mongodb+srv://{username}:{password}{db_conection_string}?retryWrites=true&w=majority
+    ```
 
 6. Client side `.env` file will need (for Firebase authentication):
 
-```env
-# All values auto-generated when creating a Firebase application
-VITE_FIREBASE_APIKEY= {firebase_api_key}
-VITE_FIREBASE_AUTH_DOMAIN= {firebase_auth_domain}
-VITE_FIREBASE_PROJECT_ID= {project_id}
-VITE_FIREBASE_STORAGE_BUCKET= {storage_bucket}
-VITE_FIREBASE_MESSAGING_SENDER_ID= {messaging_sender_id}
-VITE_FIREBASE_APP_ID= {app_id}
-```
+    ```env
+    # All values auto-generated when creating a Firebase application
+    VITE_FIREBASE_APIKEY= {firebase_api_key}
+    VITE_FIREBASE_AUTH_DOMAIN= {firebase_auth_domain}
+    VITE_FIREBASE_PROJECT_ID= {project_id}
+    VITE_FIREBASE_STORAGE_BUCKET= {storage_bucket}
+    VITE_FIREBASE_MESSAGING_SENDER_ID= {messaging_sender_id}
+    VITE_FIREBASE_APP_ID= {app_id}
+    ```
 
 7. Open server in terminal, run `nodemon server.js` to start server
 8. Open client in terminal, run `npm run dev` to start client
