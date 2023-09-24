@@ -9,7 +9,7 @@
 -   [Background](#background)
 -   [Features](#features)
 -   [Technologies Used](#technologies-used)
--   [Screenshots](#Screenshots)
+-   [Screenshots](#screenshots)
 -   [Functionality](#functionality)
 -   [Design](#design)
 -   [Running Locally](#running-locally)
@@ -78,15 +78,25 @@ And so, [Array] was born.
 
 ## Screenshots
 
-<p align="center">
 
-<img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/client/public/profileBanner.png" alt="array-banner" align="center"/>
+<p align="center">Login & Registration</p>
+<p align="center"><img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/registration.jpg" alt="array-banner" width="400"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/login.jpg" alt="array-banner" width="400"/></p>
+
+<p align="center">Home View & Profile</p>
+<p align="center"><img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/home-screen.jpg" alt="array-banner" width="400"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/profile-view.jpg" alt="array-banner" width="400"/></p>
+
+<p align="center">Create Post, Create Post Modal, Single Post View, Filter Posts/Users</p>
+<p align="center"><img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/create-post.jpg" alt="array-banner" width="200"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/creat-post-modal.jpg" alt="array-banner" width="200"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/single-post-view.jpg" alt="array-banner" width="200"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/filter-posts-users.jpg" alt="array-banner" width="200"/></p>
+
+<p align="center">Edit Profile, User Profile</p>
+<p align="center"><img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/edit-profile.jpg" alt="array-banner" width="400"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/user-profile.jpg" alt="array-banner" width="400"/></p>
+
+<p align="center">Light Mode, Tablet View, Mobile View</p>
+<p align="center"><img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/light-mode.jpg" alt="array-banner" width="400"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/responsive-tablet.jpg" alt="array-banner" width="250"/> <img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/screenshots/responsive-mobile.jpg" alt="array-banner" height="250"/></p>
 
 
 
 
-
-</p>
 ---
 
 ## Functionality
