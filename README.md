@@ -78,6 +78,15 @@ And so, [Array] was born.
 
 ## Screenshots
 
+<p align="center">
+
+<img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/client/public/profileBanner.png" alt="array-banner" align="center"/>
+
+
+
+
+
+</p>
 ---
 
 ## Functionality
