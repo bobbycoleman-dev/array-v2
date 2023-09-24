@@ -3,6 +3,14 @@
 
 <p align="center"><img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/client/public/profileBanner.png" alt="array-banner" align="center"/></p>
 
+---
+
+
+[Video Presentation](https://youtu.be/6-WVuyHCWo4?si=9F7sxBgZUao15J6q&t=988), presented at Coding Dojo Graduation Ceremony. Timestamps: 16:28 to 26:05
+
+
+---
+
 
 ## Table of Contents
 
