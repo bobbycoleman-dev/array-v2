@@ -26,7 +26,7 @@
 
 ## Background
 
-I know I wanted to build a SPA that people would enjoy using, but also have a purpose to use it. So, one night while thinking about a piece of code I had been working on earlier that day, I was thinking about how I could share it.
+I knew I wanted to build a single-page app (SPA) that people would enjoy using, but also have a purpose to use it. So, one night while thinking about a piece of code I had been working on earlier that day, I was thinking about how I could share it.
 
 Sharing code is a big portion of being a part of the dev community as well as sharing code that you created and are proud of. And as far as I knew, there wasn't a platform where the main purpose was to share code and connect with other dev with similar interests.
 
