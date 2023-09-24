@@ -73,6 +73,10 @@ And so, [Array] was born.
 
 ---
 
+## Screenshots
+
+---
+
 ## Functionality
 
 When first visiting the site, you are brought to the Login screen if you have an account, or you can travel to the Registration screen to create an account. The registration form takes your full name, a selected (unique) username, your email, and password/confirm password. After successfully registering, you are taken to the login screen to login in.
