@@ -1,7 +1,8 @@
 <h1 align="center">[Array]</h1>
 <h3 align="center">A social media platform for developers to share their code</h3>
 
-<img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/client/public/profileBanner.png" alt="array-banner" align="center"/>
+<p align="center"><img src="https://github.com/bobbycoleman-dev/array-v2/blob/main/client/public/profileBanner.png" alt="array-banner" align="center"/></p>
+
 
 ## Table of Contents
 
@@ -9,9 +10,9 @@
 -   [Features](#features)
 -   [Technologies Used](#technologies-used)
 -   [Screenshots](#Screenshots)
--   [Functionality](#Functionality)
--   [Design](#Design)
--   [Running Locally](#Running-Locally)
+-   [Functionality](#functionality)
+-   [Design](#design)
+-   [Running Locally](#running-locally)
 
 ---
 
